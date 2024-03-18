@@ -21,16 +21,16 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
-        pip install -r bikeshare_project/requirements/test_requirements.txt
+        pip install -r titanic-project-ml/requirements/test_requirements.txt
     - name: Train pipeline
       run: |
-        python bikeshare_project/bikeshare_model/train_pipeline.py
+        python titanic-project-ml/titanic_model/train_pipeline.py
     - name: Test with pytest
       run: |
         pytest
     - name: Format code with Black
       run: |
-        black bikeshare_project/bikeshare_model/*.py
+        black titanic-project-ml/titanic/*.py
     - name: Lint with pylint
       run: |
-        pylint --disable=R,C bikeshare_project/bikeshare_model/{pipeline,train_pipeline,predict}.py
+        pylint --disable=R,C titanic-project-ml/titanic_model/{pipeline,train_pipeline,predict}.py
