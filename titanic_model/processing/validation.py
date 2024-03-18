@@ -44,7 +44,7 @@ class DataInputSchema(BaseModel):
     Fare: Optional[float]
     Cabin: Optional[Union[str, float]]
     Embarked: Optional[str]
-    Fare: Optional[int]
+    Fare: Optional[float]
 
 
 class MultipleDataInputs(BaseModel):
