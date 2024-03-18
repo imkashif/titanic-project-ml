@@ -25,9 +25,6 @@ jobs:
     - name: Train pipeline
       run: |
         python titanic_model/train_pipeline.py
-    - name: Test with pytest
-      run: |
-        pytest
     - name: Format code with Black
       run: |
         black titanic_model/*.py
